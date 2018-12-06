@@ -57,3 +57,18 @@ error: npm start
       npm ERR!     /home/daria_der/Daria/BI/pan-genome-visualization/npm-debug.log
 fix: sudo fuser -k 8000/tcp .  ##closes terminal's tab and finishess all processes conncted with 8000 port
 
+2018_12_06 
+tool: PanX analyser
+
+Error:  ./panX.py -fn ./data/Klebs -st 5 -sl Klebsiella_pneumoniae -t 64 > Klebs.log
+      IOError: [Errno 2] No such file or directory: '/home/daria_der/Daria/BI/pan-genome-analysis/data/Klebs/protein_faa/diamond_matches/allclusters.tsv'
+Error: 
+      ValueError: Did not recognise the LOCUS line layout:
+      LOCUS       NODE_1_length_484016_cov_10.350808484016 bp   DNA linear
+Fix:??? 
+      https://github.com/biopython/biopython/pull/812
+      https://github.com/biopython/biopython/issues/363
+      https://github.com/biopython/biopython/pull/903
+      https://github.com/biopython/biopython/pull/903/commits/0951b24f553af15d288a0ca0f10581b713e36a2e
+
+
