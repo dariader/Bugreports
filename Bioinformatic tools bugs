@@ -70,5 +70,17 @@ Fix:???
       https://github.com/biopython/biopython/issues/363
       https://github.com/biopython/biopython/pull/903
       https://github.com/biopython/biopython/pull/903/commits/0951b24f553af15d288a0ca0f10581b713e36a2e
-
-
+Error: ./panX.py -fn ./data/Klebs -st 5 -sl Klebsiella_pneumoniae -t 64 > Klebs.log
+      ImportError: No module named ete2
+Fix:
+      pip install ete2
+Error: No module named treetime
+      Running panX in main folder: /home/daria_der/Daria/BI/pan-genome-analysis/data/Klebs/
+Error (log file):
+      diamond not found:
+      please make sure that diamond is installed and diamond binary file is included in the executable search path (e.g.: /usr/bin/diamond);
+      alternatively, one can specify diamond path via the parameter -dmp (e.g.: ./panX.py -dmp /mypath/diamond -fn ...)
+fix -dmp /home/daria_der/miniconda2/envs/panX/bin/diamond
+./panX.py -dmp /home/daria_der/miniconda2/envs/panX/bin/diamond -fn ./data/Klebs -st 5 -sl Klebsiella_pneumoniae -t 64 > Klebs.log
+      Error:
+      IOError: [Errno 2] No such file or directory: '/home/daria_der/Daria/BI/pan-genome-analysis/data/Klebs/protein_faa/diamond_matches/allclusters.tsv'
