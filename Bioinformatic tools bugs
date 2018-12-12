@@ -84,3 +84,22 @@ fix -dmp /home/daria_der/miniconda2/envs/panX/bin/diamond
 ./panX.py -dmp /home/daria_der/miniconda2/envs/panX/bin/diamond -fn ./data/Klebs -st 5 -sl Klebsiella_pneumoniae -t 64 > Klebs.log
       Error:
       IOError: [Errno 2] No such file or directory: '/home/daria_der/Daria/BI/pan-genome-analysis/data/Klebs/protein_faa/diamond_matches/allclusters.tsv'
+
+
+2018_12_13 (s)tool = Parsnp
+Error: ./parsnp -g ./Merged/GCA_003574255.1_ASM357425v1_genomic.gbk -d Isolates -p 6
+            Traceback (most recent call last):
+              File "<string>", line 624, in <module>
+            NameError: name 'nameok' is not defined
+Fix: delete reference file from isolates list (obviously). And remember - ref genome is gbk or fna, but sample always fna!!
+
+Errror:
+      ERROR: genome sequence GC00000291_10_na_aln.fa seems to aligned! remove and restart 
+Fix: delete dashes
+
+Error:
+      ERROR: Parsnp requires 2 or more genomes to run, exiting
+Fix: turn off and on computer      
+     
+
+
